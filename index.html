@@ -1,19 +1,16 @@
-
+<!DOCTYPE html>
 <html>
-  <title>
-    Yeryn Do
-  </title>
-  
+  <head>
+    <meta charset="utf-8">
+    <title>Yeryn Do</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  </head>
   <body>
-    <h1>An ongoing process with my current project</h1>
+    {% include 'includes/_navbar.html' %}
+    <div class="container">
+      {% block body %}{% endblock %}
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
   </body>
-  
-  <style>
-    body {
-      background-color:blue;
-      color:#fff;
-      text-align:center;
-    }
-  </style>
-  
 </html>
