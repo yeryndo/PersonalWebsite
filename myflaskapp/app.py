@@ -18,7 +18,7 @@ def about():
 def articles():
     return render_template('articles.html', articles = Articles)
 
-@app.route('/article/<string:id>/')
+@app.route('/article/<string:id>/') #this is a comment
 def article(id):
     return render_template('article.html', id=id)
 
