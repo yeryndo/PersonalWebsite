@@ -111,7 +111,7 @@ function update() {
     // && player.body.touching.down disables ability to float
     if (cursors.up.isDown)
     {
-        //snd.play();
+        snd.play();
         player.body.velocity.y = -200;
     }
 
@@ -119,7 +119,6 @@ function update() {
 
 function collectStar (player, star) {
     star.kill();
-    snd.play();
     score += 5;
     scoreText.text = 'Total: ' + score;
 }
