@@ -23,5 +23,12 @@ var happyQuotes = [
 
 function newHQuote() {
   var randomNumber = Math.floor(Math.random() * happyQuotes.length));
-  document.getElementByID('quoteDisplay').innerHTML = happyQuotes[randomNumber];
+  return happyQuotes[randomNumber];
 }
+document.getElementByID('clickMe').onclick = newHQuote();
+
+var el = document.getElementByID("clickMe");
+if (el.addEventListener)
+el.addEventListener("click", newHQuote(), false);
+else if (el.attachEvent)
+el.attachEvent('onclick', newHQuote());
