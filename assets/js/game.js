@@ -7,7 +7,7 @@ function preload() {
     game.load.image('star', 'images/game/star.png');
     game.load.spritesheet('person', 'images/game//dude.png', 32, 48);
 
-      game.load.audio('jump', 'images/game/Mario-jump-sound.mp3');
+    game.load.audio('jump', 'images/game/Mario-jump-sound.mp3');
 }
 
 var player;
@@ -23,12 +23,7 @@ function create() {
     game.physics.startSystem(Phaser.Physics.ARCADE);
     game.add.sprite(0, 0, 'background');
 
-        //	Here we set-up our audio sprite
-    	  //fx = game.add.audio('jump');
-        //fx.allowMultiple = true;
-
-        //fx.addMarker('jump', 10, 1.0);
-        //fx.play('ping');
+    var snd = game.add.audio('jump');
 
     //  group land items and allow physics
     platforms = game.add.group();
@@ -71,7 +66,7 @@ function create() {
         //  each star has a slightly random bounce value
         star.body.bounce.y = 0.3 + Math.random() * 0.2;
     }
-    scoreText = game.add.text(480, 15, 'Total: 0', { fontSize: '30px', fill: 'purple' });
+    scoreText = game.add.text(500, 15, 'Total: 0', { fontSize: '30px', fill: 'purple' });
     cursors = game.input.keyboard.createCursorKeys();
 
 }
@@ -116,8 +111,7 @@ function update() {
     // && player.body.touching.down disables ability to float
     if (cursors.up.isDown)
     {
-        var snd = game.add.audio('jump');
-        snd.play();
+        //snd.play();
         player.body.velocity.y = -200;
     }
 
@@ -125,6 +119,7 @@ function update() {
 
 function collectStar (player, star) {
     star.kill();
+    snd.play();
     score += 5;
     scoreText.text = 'Total: ' + score;
 }
