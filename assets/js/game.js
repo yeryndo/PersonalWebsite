@@ -6,7 +6,6 @@ function preload() {
     game.load.image('bar', 'images/game/pf_short.jpg');
     game.load.image('star', 'images/game/star.png');
     game.load.spritesheet('person', 'images/game//dude.png', 32, 48);
-
     game.load.audio('jump', 'images/game/Mario-jump-sound.mp3');
 }
 
@@ -16,14 +15,12 @@ var cursors;
 var stars;
 var score = 0;
 var scoreText;
-
+var winText;
 var fx;
 
 function create() {
     game.physics.startSystem(Phaser.Physics.ARCADE);
     game.add.sprite(0, 0, 'background');
-
-    //var snd = game.add.audio('jump');
 
     //  group land items and allow physics
     platforms = game.add.group();
@@ -34,7 +31,6 @@ function create() {
     //  Scale it to fit the width of the game (the original sprite is 400x32 in size)
     ground.scale.setTo(2, 2);
 
-    //  This stops it from falling away when you jump on it
     ground.body.immovable = true;
 
     var ledge = platforms.create(450, 300, 'bar');
@@ -58,48 +54,39 @@ function create() {
     stars = game.add.group();
     stars.enableBody = true;
 
-    //  Here we'll create 12 of them evenly spaced apart
     for (var i = 0; i < 12; i++)
     {
         var star = stars.create(i * 70, 0, 'star');
         star.body.gravity.y = 300;
-        //  each star has a slightly random bounce value
         star.body.bounce.y = 0.3 + Math.random() * 0.2;
     }
     scoreText = game.add.text(600, 15, 'Total: 0', { fontSize: '30px', fill: 'purple' });
     cursors = game.input.keyboard.createCursorKeys();
+    winText = game.add.text(350, 210, 'You Win!', {fontSize: '200px', fill: 'red'});
+    winText.visible = false;
 
 }
 
 function update() {
-
-    //  Collide the player and the stars with the platforms
     var hitPlatform = game.physics.arcade.collide(player, platforms);
     game.physics.arcade.collide(stars, platforms);
 
-    //  Checks to see if the player overlaps with any of the stars, if he does call the collectStar function
     game.physics.arcade.overlap(player, stars, collectStar, null, this);
 
-    //  Reset the players velocity (movement)
     player.body.velocity.x = 0;
 
     if (cursors.left.isDown)
     {
-        //  Move to the left
         player.body.velocity.x = -150;
         player.animations.play('left');
-
-
     }
     else if (cursors.right.isDown)
     {
-        //  Move to the right
         player.body.velocity.x = 150;
         player.animations.play('right');
     }
     else
     {
-        //  Stand still
         player.animations.stop();
         player.frame = 4;
     }
@@ -111,11 +98,15 @@ function update() {
         player.body.velocity.y = -200;
     }
 
+    if(score == 60){
+      winText.visible = true;
+      scoreText.visible = false;
+    }
 }
 
 function collectStar (player, star) {
-  var snd = game.add.audio('jump', 10, 1.0);
-  snd.play();
+    var snd = game.add.audio('jump', 10, 1.0);
+    snd.play();
     star.kill();
     score += 5;
     scoreText.text = 'Total: ' + score;
