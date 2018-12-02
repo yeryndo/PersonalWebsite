@@ -5,7 +5,7 @@ function preload() {
     game.load.image('ground', 'images/game/pf_bubble.jpg');
     game.load.image('bar', 'images/game/pf_short.jpg');
     game.load.image('star', 'images/game/star.png');
-    game.load.spritesheet('person', 'images/game//dude.png', 32, 48);
+    game.load.spritesheet('person', 'images/game/dude.png', 32, 48);
     game.load.audio('jump', 'images/game/Mario-jump-sound.mp3');
 }
 
@@ -16,7 +16,6 @@ var stars;
 var score = 0;
 var scoreText;
 var winText;
-var fx;
 
 function create() {
     game.physics.startSystem(Phaser.Physics.ARCADE);
