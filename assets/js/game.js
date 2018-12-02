@@ -108,7 +108,7 @@ function update() {
     // && player.body.touching.down &&hitPlatform
     if (cursors.up.isDown)
     {
-        player.body.velocity.y = -400;
+        player.body.velocity.y = -200;
     }
 
 }
