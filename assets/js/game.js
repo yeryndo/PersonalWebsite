@@ -23,6 +23,9 @@ function create() {
     game.physics.startSystem(Phaser.Physics.ARCADE);
     game.add.sprite(0, 0, 'background');
 
+    fx = game.add.audio('jump');
+    fx.addMarker('jump', 10, 1.0);
+
     var snd = game.add.audio('jump');
 
     //  group land items and allow physics
@@ -111,7 +114,7 @@ function update() {
     // && player.body.touching.down disables ability to float
     if (cursors.up.isDown)
     {
-        snd.play();
+        fx.play('jump');
         player.body.velocity.y = -200;
     }
 
