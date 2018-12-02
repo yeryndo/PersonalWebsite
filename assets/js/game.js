@@ -26,7 +26,7 @@ function create() {
     fx = game.add.audio('jump');
     fx.addMarker('jump', 10, 1.0);
 
-    var snd = game.add.audio('jump');
+    //var snd = game.add.audio('jump');
 
     //  group land items and allow physics
     platforms = game.add.group();
@@ -69,7 +69,7 @@ function create() {
         //  each star has a slightly random bounce value
         star.body.bounce.y = 0.3 + Math.random() * 0.2;
     }
-    scoreText = game.add.text(500, 15, 'Total: 0', { fontSize: '30px', fill: 'purple' });
+    scoreText = game.add.text(600, 15, 'Total: 0', { fontSize: '30px', fill: 'purple' });
     cursors = game.input.keyboard.createCursorKeys();
 
 }
@@ -112,7 +112,7 @@ function update() {
 
     //jumping details
     // && player.body.touching.down disables ability to float
-    if (cursors.up.isDown)
+    if (cursors.up.isDown&& hitPlatform)
     {
         fx.play('jump');
         player.body.velocity.y = -200;
