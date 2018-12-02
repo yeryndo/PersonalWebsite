@@ -112,9 +112,11 @@ function update() {
 
     //jumping details
     // && player.body.touching.down disables ability to float
-    if (cursors.up.isDown&& hitPlatform)
+    if (cursors.up.isDown && hitPlatform)
     {
-        fx.play('jump');
+        fx = game.add.audio('jump');
+        fx.addMarker('jump', 10, 1.0);
+        fx.play();
         player.body.velocity.y = -200;
     }
 
