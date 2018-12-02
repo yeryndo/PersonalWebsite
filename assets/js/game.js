@@ -87,7 +87,6 @@ function update() {
     {
         //  Move to the left
         player.body.velocity.x = -150;
-
         player.animations.play('left');
 
 
@@ -96,14 +95,12 @@ function update() {
     {
         //  Move to the right
         player.body.velocity.x = 150;
-
         player.animations.play('right');
     }
     else
     {
         //  Stand still
         player.animations.stop();
-
         player.frame = 4;
     }
 
@@ -111,7 +108,7 @@ function update() {
     // && player.body.touching.down &&hitPlatform
     if (cursors.up.isDown)
     {
-        player.body.velocity.y = -200;
+        player.body.velocity.y = -400;
     }
 
 }
