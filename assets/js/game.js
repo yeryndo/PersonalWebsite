@@ -108,18 +108,17 @@ function update() {
     }
 
     //jumping details
-    // && player.body.touching.down disables ability to float
-    if (cursors.up.isDown && hitPlatform)
+    // && player.body.touching.down &&hitPlatform
+    if (cursors.up.isDown)
     {
-
-        var snd = game.add.audio('jump', 10, 1.0);
-        snd.play();
         player.body.velocity.y = -200;
     }
 
 }
 
 function collectStar (player, star) {
+  var snd = game.add.audio('jump', 10, 1.0);
+  snd.play();
     star.kill();
     score += 5;
     scoreText.text = 'Total: ' + score;
