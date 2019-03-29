@@ -48,29 +48,18 @@
 				<div class="container">
 					<header class="align-center">
 						<h5><font color="red">WARNING</font>: These quotes may be completely useless</h5>
-						<h1>Click on a mood to generate a random quote related to it</h1>
-						<hr><!--line of separation -->
-						<div class="quote-box">
-
-						<h2><p id="quote"><b>Due tomorrow is definitely not do tomorrow</p></b></h2>
-						<p id="author">-Yeryn Do</p>
-						</div>
-							<ul class="actions">
-								<div id = "quoteDisplay">
-									<!-- Quote will display here -->
-									<input id = "clickMe" type = "button" value = "clickme" on click = "newHQuote();"/>
-								<li><h2><a href="" class="button special">Happy</a></h2></li>
-							<button onclick = "newHQuote();">Happy</button>
-							<script src="quoteSource\happy.js"></script>
-								<li><h2><a href="#" class="button">Mad</a></h2></li>
-								<!-- <button onclick = "newMQuote()">Happy</button>
-								<script src="quoteSrouce\mad.js"></script> -->
-								<li><h2><a href="#" class="button alt">Sad</a></h2></li>
-							</ul>
-						</div>
-            					</div>
+						<h1>Click to generate a random quote</h1>
 					</header>
-           			</div>
+
+						<hr><!--line of separation -->
+						<div id = "clickMe">
+							<!-- Quote will display here -->
+
+						</div>
+						<button onclick = "newHQuote()">Give me a Quote!!!</button>
+						<script src="quoteSource/happy.js"></script>
+        </div>
+
 
 		<!-- Footer -->
 			<footer id="footer">
@@ -88,6 +77,7 @@
 			</footer>
 
 		<!-- Scripts -->
+
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
