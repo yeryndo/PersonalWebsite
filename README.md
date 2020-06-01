@@ -1,2 +1,2 @@
-Welcome to my page. This is still currently in work.
+Welcome to my personal website! This is where I will be working on my projects and displaying them.
 
