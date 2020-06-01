@@ -1,4 +1,3 @@
-
 var happyQuotes = [
   {"quote": "Don\'t cry because it\'s over, smile because it happened.", "author":"― Dr. Seuss"},
   {"quote": "Time you enjoy wasting is not wasted time.", "author":"― Marthe Troly-Curtin, Phrynette Married"},
@@ -24,7 +23,6 @@ var happyQuotes = [
 
 function newHQuote() {
   var rand = Math.floor(Math.random() * (happyQuotes.length));
-  //document.getElementById('clickMe').innerHTML = happyQuotes[rand];
   document.getElementById('clickMeQuote').innerHTML = happyQuotes[rand].quote;
   document.getElementById('clickMeAuthor').innerHTML = happyQuotes[rand].author;
 };
