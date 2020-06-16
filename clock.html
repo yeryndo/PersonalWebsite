@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Digital Analog Clock</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="shortcut icon" type = "image/png" href="images/favicon.ico">
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="assets/css/clockStyle.css" type="text/css" media="all">
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a href="index.html">Yeryn <span>Do</span></a></div>
+				<a href="#menu">Menu</a> 
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<!-- <li><a href="generic.html">Generic</a></li>-->
+					<li><a href = "quote.html">Random Quote Generator</a></li>
+					<li><a href = "calculator.html">Simple Calculator</a></li>
+					<li><a href = "breakoutGame.html">Classic 2D Game</a></li>
+					<li><a href = "game.html">Mini Phaser Game</a></li>
+					<!-- <li><a href="clock.html">Clock</a></li> -->
+				</ul>
+			</nav>
+
+		<!-- One -->
+			<section id="One" class="wrapper style3">
+				<div class="inner">
+					<header class="align-center">
+						<p>A mini CS Project</p>
+						<h2>JavaScript Analog Clock</h2>
+					</header>
+				</div>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="wrapper style2">
+				<div class="container">
+                    <div class="analogclockbox">
+                        <svg id="clock" xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 600 600">
+                            <g id="face">
+                                <circle class="circle" cx="300" cy="300" r="253.9"/>
+                                <path class="hour-marks" d="M300.5 94V61M506 300.5h32M300.5 506v33M94 300.5H60M411.3 107.8l7.9-13.8M493 190.2l13-7.4M492.1 411.4l16.5 9.5M411 492.3l8.9 15.3M189 492.3l-9.2 15.9M107.7 411L93 419.5M107.5 189.3l-17.1-9.9M188.1 108.2l-9-15.6"/>
+                                <circle class="mid-circle" cx="300" cy="300" r="16.2"/>
+                            </g>
+                            <g id="hour">
+                                <path class="hour-arm" d="M300.5 298V142"/>
+                                <circle class="sizing-box" cx="300" cy="300" r="253.9"/>
+                            </g>
+                            <g id="minute">
+                                <path class="minute-arm" d="M300.5 298V67"/>
+                                <circle class="sizing-box" cx="300" cy="300" r="253.9"/>
+                            </g>
+                            <g id="second">
+                                <path class="second-arm" d="M300.5 350V55"/>
+                                <circle class="sizing-box" cx="300" cy="300" r="253.9"/>
+                            </g>
+                        </svg>
+                    </div><!-- .clockbox -->
+
+                    <footer class = "align-center">
+                        <h2>This is a digital analog clock I learned to make while learning the basics of JavaScript!</h2>
+                        <h1>It should show up as your current time.</h1>
+                    </footer>
+        		</div>
+
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<ul class="icons">
+						<li><a href="https://github.com/yeryndo" class="icon fa-github"><span class="label">Github</span></a></li>
+						<li><a href="https://www.linkedin.com/in/yeryndo" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://www.instagram.com/yeryndo" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="mailto:ydo2@villanova.edu" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+					</ul>
+				</div>
+				<div class="copyright">
+					&copy; Yeryn Do. All rights reserved.
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+            <script src="assets/js/main.js"></script>            
+            <script src="assets/js/clock.js" defer></script> 
+
+	</body>
+</html>
