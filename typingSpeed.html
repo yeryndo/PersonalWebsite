@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>JavaScript Typing Speed</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="shortcut icon" type = "image/png" href="images/favicon.ico">
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="assets/css/typingStyle.css" type="text/css" media="all">
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a href="index.html">Yeryn <span>Do</span></a></div>
+				<a href="#menu">Menu</a> 
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href = "quote.html">Random Quote Generator</a></li>
+					<li><a href = "calculator.html">Simple Calculator</a></li>
+					<li><a href = "breakoutGame.html">Classic 2D Game</a></li>
+                    <li><a href = "game.html">Mini Phaser Game</a></li>
+                    <li><a href = "clock.html">Clock</a></li>
+                    <li><a href = "typingSpeed.html">Typing Speed</a></li>
+				</ul>
+			</nav>
+
+		<!-- One -->
+			<section id="One" class="wrapper style3">
+				<div class="inner">
+					<header class="align-center">
+						<p>A mini CS Project</p>
+						<h2>JavaScript Typing Speed</h2>
+					</header>
+				</div>
+			</section>
+
+        <!-- Two -->
+        <main class="main">
+            <article class="introParagraph">
+                <p>This is a typing test in which your goal is to duplicate the provided text <strong><span style="color: red;">exactly</span></strong> as it is in the field below. 
+                    The timer starts when you start typing and stops when you finish typing this this text exactly as it is.</p>
+            </article>
+            <section class="test-area">
+                <div id="testingText">
+                    <p>Hello, I came here to check out this pRojEct done by JavaScript! This is the first version of the pr0J3ct. The next additional feature I want to add is an error counter. But we will see h0w that goes l@t3r on!</p>
+                </div>
+                        
+                <!--  I came here to check out this pRojEct done by JavaScript! Additional features we can add is a words per minute count and we can find the 
+                calculation online or just grab the time that I calculated, combine it with the number of words
+                in my test, and then figure out exactly how fast you are typing. you can also count the number of errors the person 
+                doing the test makes because every time an error is triggered you can just increment a number and then it can display 
+                the number of errors or you can do something really advanced like add an array of different texts so the tester can switch 
+                between different texts to test or even add a high score board. -->
+    
+                <div class="test-wrapper">
+                    <textarea id="test-area" name="textarea" rows="6" placeholder="The clock will start once you start typing in this box!"></textarea>
+                </div><!-- .test-wrapper -->
+    
+                <div class="meta">
+                    <section id="clock">
+                        <div class="timer">00:00:00</div>
+                    </section>
+    
+                    <button id="reset">Start over</button>
+                </div><!-- .meta -->
+            </section><!-- .test-area -->
+        </main>
+
+			<section id="two" class="wrapper style2">
+                <div class = "container">
+                    <footer class = "align-center">
+                        <h3>This is a typing speed checker I learned to make while learning the basics of JavaScript!</h2>
+                        <h1>Special thanks to Morten Rand-Hendriksen on Linkedin Learning</h1>
+                    </footer>
+                </div>
+            </section>
+
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<ul class="icons">
+						<li><a href="https://github.com/yeryndo" class="icon fa-github"><span class="label">Github</span></a></li>
+						<li><a href="https://www.linkedin.com/in/yeryndo" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://www.instagram.com/yeryndo" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="mailto:ydo2@villanova.edu" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+					</ul>
+				</div>
+				<div class="copyright">
+					&copy; Yeryn Do. All rights reserved.
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+            <script src="assets/js/main.js"></script>            
+            <script src="assets/js/typing.js" defer></script> 
+
+	</body>
+</html>
